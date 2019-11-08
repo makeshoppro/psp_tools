@@ -1,4 +1,4 @@
-from scipy import misc
+import imageio
 from PIL import Image
 import sys
 
@@ -9,7 +9,7 @@ def convert(list):
 # the filename should be passed in as an arugment
 print ("The image we are working on is: %s" % (sys.argv[1]))
 
-imgObj = misc.imread(sys.argv[1])
+imgObj = imageio.imread(sys.argv[1])
 
 imgHeight = imgObj.shape[0]
 imgLength = imgObj.shape[1]
@@ -35,4 +35,4 @@ for row in range(imgHeight):
         editableImg[ocol, row] = lastColor
 
 # save the pixel stretch image
-misc.imsave("pixel_stretch.png", outImg)
+imageio.imwrite("pixel_stretch.png", outImg)
