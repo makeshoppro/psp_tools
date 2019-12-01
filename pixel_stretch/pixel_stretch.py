@@ -27,7 +27,7 @@ for row in range(imgHeight):
     
     for col in range (imgLength):        
         #look for non-transparent pixels
-        if imgObj[row, col][3] > 0:
+        if imgObj[row, col][3] == 255:
             lastColor = convert(imgObj[row,col]);
 
     # fill the row of the outbound image
