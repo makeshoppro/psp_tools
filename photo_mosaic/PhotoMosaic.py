@@ -47,7 +47,7 @@ for file in glob.glob(".\Input\*.jpg"):
 	imageList.append(smallTemp)
 	
 for pfile in glob.glob(".\Input\*.png"):
-	tempImage = Image.open(file)
+	tempImage = Image.open(pfile)
 	smallTemp = tempImage.resize((cellWidth, cellHeight), Image.NEAREST)
 	imageList.append(smallTemp)
 
